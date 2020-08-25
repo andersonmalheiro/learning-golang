@@ -5,6 +5,7 @@ import (
 
 	"learning-go/basics"
 	"learning-go/flow"
+	"learning-go/pointers"
 )
 
 func main() {
@@ -19,4 +20,13 @@ func main() {
 	flow.Loops()
 
 	flow.Conditionals()
+
+	user := pointers.CreateUser("Anderson", "Major")
+
+	fmt.Println(user)
+
+	pointers.UpdateUser(&user, "Anderson Malheiro", "Andim")
+
+	fmt.Printf("Updated user: %+v\n", user)
+
 }
